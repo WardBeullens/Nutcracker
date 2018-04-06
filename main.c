@@ -357,7 +357,7 @@ void printTime(){
 
 int main()
 {
-	srand((unsigned int)"I'm a wuss, so I am using a fixed seed for the PQCRYPTO 2018 Demo.");
+	srand(1);
 	printTime();
 
 	// Demonstrates Walnut
@@ -378,5 +378,5 @@ int main()
 	printTime();
 	printf("\nDone!\n");
 
-	return 1;
+	return 0;
 }
