@@ -2,8 +2,8 @@
 #include "solveSubstep.h"
 
 #define GENERATORS_OF_SUBGROUP 70
-#define SEARCH_LEN_A 16
-#define SEARCH_LEN_B 40
+#define SEARCH_LEN_A 12
+#define SEARCH_LEN_B 30
 #define SUBGROUP_CHAINS 50000
 #define GEN_BRAID_LEN BRAID_LEN/20
 

@@ -330,7 +330,9 @@ void ForgeryAttack(){
 	long long inLen = GET_NUM_BRAID_BYTES(forgedSignature)+MESSAGE_LEN;
 	result = signature_verification(publicKey, forgedSignature , &inLen , (unsigned char **) &returnedMessage , &message_len);
 
-	printf("signature is %d Artin generators long \n", GET_NUM_BRAID_GENERATORS(forgedSignature));
+	printf("signature is %d Artin generators long \n\n", GET_NUM_BRAID_GENERATORS(forgedSignature));
+	printf("Verifying signature ...\n");
+
 
 	if(result){
 		printf("Signature is valid\n");
@@ -355,7 +357,7 @@ void printTime(){
 
 int main()
 {
-	srand(time(NULL));
+	srand((unsigned int)"I'm a wuss, so I am using a fixed seed for the PQCRYPTO 2018 Demo.");
 	printTime();
 
 	// Demonstrates Walnut
@@ -365,13 +367,13 @@ int main()
 	//collisionAttack();
 
 	// Demonstrates solving a REM instance 
-	solveREMDemo();
+	//solveREMDemo();
 
 	// A key recovery attack by solving two REM instances
 	//Attack();
 
 	// A universal signature forgery by solving one REM instance
-	//ForgeryAttack();
+	ForgeryAttack();
 
 	printTime();
 	printf("\nDone!\n");

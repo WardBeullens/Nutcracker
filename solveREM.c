@@ -1,9 +1,9 @@
 #include "solveREM.h"
 
-#define NUMBER_OF_GENS 50
+#define NUMBER_OF_GENS 60
 #define MAX_USEFUL_COLLISIONS 1
 #define MAX_USEFUL_COLLISIONS_FACTOR 1
-#define MAX_COLLISIONS 500
+#define MAX_COLLISIONS 10000
 #define MAX_CHAINS 50000
 
 //#define VERBOSE  
@@ -282,7 +282,6 @@ int solveStep(uint8_t target[WALNUT_BRAID][WALNUT_BRAID], int n, uint8_t *Tvalue
 				// Compute and print the target for the next step
 				copyMatrix(target,newTarget);
 				walnut_emul(newTarget,permutation,bestAnswerStepBraid,Tvalues);
-				printMatrix(newTarget);
 
 				restBraid[0]=0;
 				restBraid[1]=0;
