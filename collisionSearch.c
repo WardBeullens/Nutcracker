@@ -143,7 +143,7 @@ long findCollision(collisionSearch *search, unsigned char *hash1, unsigned char 
 		search->iterations += search->len[search->chainsFound];
 		search->chainsFound ++;
 		
-		reportProgress(search);
+		//reportProgress(search);
 
 		// check whether we have a collision in the table.
 		for(j=0; j<search->chainsFound-1 ;j++){
