@@ -185,7 +185,7 @@ void *worker(void * srsh){
 				search->end[search->chainsFound] = end;
 				search->chainsFound ++;
 
-				reportProgress(search);
+				//reportProgress(search);
 
 				// check if distinuished point was already in the table
 				for(j=0; j<search->chainsFound-1 ;j++){
