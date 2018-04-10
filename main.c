@@ -347,6 +347,8 @@ void ForgeryAttack(){
 	else {
 		printf("Signature is NOT valid !!!\n");
 	}
+	
+	sleep(3);
 }
 
 
