@@ -331,8 +331,14 @@ void ForgeryAttack(){
 	result = signature_verification(publicKey, forgedSignature , &inLen , (unsigned char **) &returnedMessage , &message_len);
 
 	printf("signature is %d Artin generators long \n\n", GET_NUM_BRAID_GENERATORS(forgedSignature));
-	printf("Verifying signature ...\n");
-
+	printf("Verifying signature in ...\n");
+	sleep(2);
+	printf("3\n");
+	sleep(1);
+	printf("2\n");
+	sleep(1);
+	printf("1\n");
+	sleep(1);
 
 	if(result){
 		printf("Signature is valid\n");
